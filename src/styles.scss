@@ -1,0 +1,19 @@
+@import '../node_modules/onsenui/css/onsenui.css';
+@import '../node_modules/onsenui/css/onsen-css-components.css';
+@import 'theme/colors';
+.toolbar {
+  background: -webkit-linear-gradient(top,#3e93fe,#3c98fe);
+  .back-button__label {
+    color: #fff;
+    font-size: 17px;
+  }
+  .back-button {
+    padding-left: map-get($values, edge-wide);
+    .back-button__icon {
+      img {
+        width: 11px;
+      }
+    }
+  }
+
+}

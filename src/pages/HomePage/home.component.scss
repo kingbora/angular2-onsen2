@@ -1,0 +1,79 @@
+@import "../../theme/colors";
+
+[homeTabs] {
+  .fa-icon-home,.fa-icon-home-active,.fa-icon-mine,.fa-icon-mine-active {
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+  .fa-icon-home:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: url('../../assets/images/home/un_home.svg') no-repeat;
+    background-size: 20px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .fa-icon-home-active:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/images/home/home.svg') no-repeat;
+    background-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .fa-icon-mine:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/images/home/un_mine.svg') no-repeat;
+    background-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .fa-icon-mine-active:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/images/home/mine.svg') no-repeat;
+    background-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .tabbar__button {
+    color: map-get($colors, text-9);
+  }
+  :checked + .tabbar__button {
+    color: map-get($colors, primary);
+  }
+}

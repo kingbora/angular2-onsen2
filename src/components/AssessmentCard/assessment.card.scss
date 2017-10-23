@@ -1,0 +1,108 @@
+@import '../../theme/colors.scss';
+
+rd-assessment-card {
+  display: block;
+  background-color: #fff;
+  transition: all 0.3s;
+  .col {
+    padding: 0;
+  }
+  .assessment {
+    border-radius: 5px;
+    display: block;
+    box-shadow: 0 0 3px 2px rgba(216, 216, 216, 0.2);
+    padding: 0 12px;
+    >.row {
+      height: 30px;
+      line-height: 30px;
+      &:first-child {
+        padding-top: 5px;
+      }
+    }
+    .assessment_title {
+      color: #333333;
+      font-size: 15px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .assessment_number {
+      margin-left: 4px;
+      font-size: 15px;
+      color: map-get($colors, text-9);
+    }
+    .assessment_status_flag {
+      text-align: right;
+      .go_status,.go_on_status {
+        font-size: 15px;
+        color: map-get($colors, secondary);
+      }
+      .over_status {
+        color: map-get($colors, primary);
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .avg_class_score {
+        color: map-get($colors, primary);
+        font-size: 20px;
+      }
+      .oblique_line {
+        width: 1px;
+        height: 15px;
+        margin-left: 2px;
+        display: inline-block;
+        background-color: map-get($colors, primary);
+        transform:rotate(25deg);
+        -o-transform:rotate(25deg);
+        -moz-transform:rotate(25deg);
+        -webkit-transform:rotate(25deg);
+      }
+    }
+    .card_status {
+      .card_tag {
+        padding: 2px 6px 2px 6px;
+        border-radius: 20px;
+        border: 1px solid map-get($colors, secondary);
+        font-size: 11px;
+        color: map-get($colors, secondary);
+        display: inline-block;
+        height: 15px;
+        line-height: 15px;
+        box-sizing: content-box;
+      }
+      .emend_to_be {
+        font-size: 11px;
+        color: map-get($colors, primary);
+      }
+      .emend_has_been {
+        font-size: 11px;
+        color: map-get($colors, text-9);
+      }
+    }
+    .class_area {
+      color: map-get($colors, text-9);
+      font-size: 11px;
+      position: relative;
+      .class_title {
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        >span {
+          display: block;
+          line-height: 31px;
+        }
+      }
+      .assessment_time {
+        text-align: right;
+        >span {
+          display: block;
+          line-height: 31px;
+        }
+      }
+    }
+  }
+  &:active {
+    background-color: #eee;
+  }
+}

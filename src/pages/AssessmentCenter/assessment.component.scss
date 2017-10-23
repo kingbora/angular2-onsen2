@@ -1,0 +1,11 @@
+@import '../../theme/colors';
+[assessment] {
+  .tabbar {
+    .tabbar__button {
+      color: map-get($colors, text-9);
+    }
+    :checked + .tabbar__button {
+      color: map-get($colors, text-3);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<ons-toolbar>
+  <div class="left">
+    <ons-back-button>
+      <span class="back-button__icon">
+        <img src="../../assets/icons/backButton.svg" alt="back_icon"/>
+      </span>
+      <span class="back-button__label">作业中心</span>
+    </ons-back-button>
+  </div>
+</ons-toolbar>
+<ons-tabbar position="top" animation="none">
+  <ons-tab label="最新作业" [page]="latestAssessment"></ons-tab>
+  <ons-tab label="历史作业" [page]="historyAssessment"></ons-tab>
+</ons-tabbar>

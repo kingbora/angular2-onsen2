@@ -1,0 +1,36 @@
+<ons-col class="assessment">
+  <ons-row>
+    <ons-col>
+      <span class="assessment_title">{{item.title}}</span>
+      <span *ngIf="item.questionCount !== 0" class="assessment_number">[{{item.questionCount}}题]</span>
+    </ons-col>
+    <ons-col class="assessment_status_flag" width="25%">
+      <span *ngIf="item.statusId === 1" class="go_status">去做题</span>
+      <span *ngIf="item.statusId === 2" class="go_on_status">继续做题</span>
+      <span *ngIf="item.statusId === 3" class="over_status"> {{item.score}}</span>
+      <span class="oblique_line"></span>
+      <span class="avg_class_score">{{item.avgScoreOfClass}}</span>
+    </ons-col>
+  </ons-row>
+  <ons-row class="card_status">
+    <ons-col col-8>
+      <span *ngIf="item.subjectId === 1" class="card_tag">英语</span>
+      <span *ngIf="item.subjectId === 2" class="card_tag">数学</span>
+      <span *ngIf="item.personality === 1" class="card_tag">个性化</span>
+      <span *ngIf="!item.optional"  class="card_tag" >选做</span>
+      <span *ngIf="item.requiredEmend === true" class="card_tag" >需订正</span>
+    </ons-col>
+    <ons-col>
+      <span class="emend_to_be" *ngIf="item.emendStatus === 'STATUS_TO_BE'">待订正</span>
+      <span class="emend_has_been" *ngIf="item.emendStatus === 'STATUS_HAS_BEEN'">已订正</span>
+    </ons-col>
+  </ons-row>
+  <ons-row class="class_area" border-top>
+    <ons-col class="class_title" width="66.6%">
+      <span>2015QA Class</span>
+    </ons-col>
+    <ons-col class="assessment_time">
+      <span>2015年10月20日</span>
+    </ons-col>
+  </ons-row>
+</ons-col>
